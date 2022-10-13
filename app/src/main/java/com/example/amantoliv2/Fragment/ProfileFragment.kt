@@ -64,7 +64,6 @@ class ProfileFragment : Fragment() {
     lateinit var linearLayout3:LinearLayout
     lateinit var linearLayout4:LinearLayout
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
     }

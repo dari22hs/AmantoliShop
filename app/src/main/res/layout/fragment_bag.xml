@@ -8,10 +8,6 @@
     android:background="@color/background"
     >
 
-
-
-
-
     <LinearLayout
         android:layout_marginTop="20dp"
         android:id="@+id/linearLayout2"
@@ -105,7 +101,7 @@
 
         </LinearLayout>
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/checkOut_BagPage"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -113,8 +109,10 @@
             android:layout_marginTop="20dp"
             android:layout_marginRight="10dp"
             android:layout_marginBottom="20dp"
-            android:background="@drawable/btn_bg"
-            android:text="PROCEDER AL PAGO" />
+            android:background="@drawable/btn_bg_login2"
+            android:text="PROCEDER AL PAGO"
+            android:textColor="@color/white"
+            android:textStyle="bold"/>
 
     </LinearLayout>
 
@@ -131,7 +129,7 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <!--Comentar el Lottie para ver la activity-->
-            <com.airbnb.lottie.LottieAnimationView
+            <Button
                 android:scaleType="centerCrop"
                 android:id="@+id/animationViewCartPage"
                 android:layout_width="match_parent"

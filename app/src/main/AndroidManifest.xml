@@ -11,21 +11,50 @@
 
     <application
         android:allowBackup="true"
+        android:hardwareAccelerated="false"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:largeHeap="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:largeHeap="true"
-        android:hardwareAccelerated="false"
         android:theme="@style/Theme.AmantoliShop">
-        <activity android:name="com.example.amantoliv2.PaymentMethodActivity" />
-        <activity android:name="com.example.amantoliv2.AddAddressActivity" />
-        <activity android:name="com.example.amantoliv2.ShippingAddressActivity" />
-        <activity android:name="com.example.amantoliv2.VisualResultActivity" />
-        <activity android:name="com.example.amantoliv2.ProductDetailsActivity" />
-        <activity android:name="com.example.amantoliv2.SplashScreenActivity" />
-        <activity android:name="com.example.amantoliv2.SettingsActivity" />
-        <activity android:name="com.example.amantoliv2.HomeActivity"
+        <activity
+            android:name=".HomeActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".SettingsNotifPlus"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".ManageAddresses"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".MyOrdersHistory"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity android:name=".PaymentMethodActivity" />
+        <activity android:name=".AddAddressActivity" />
+        <activity android:name=".ShippingAddressActivity" />
+        <activity android:name=".VisualResultActivity" />
+        <activity android:name=".ProductDetailsActivity" />
+        <activity android:name=".SplashScreenActivity" />
+        <activity android:name=".SettingsActivity" />
+        <activity
+            android:name=".PromoCodes"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -33,10 +62,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.amantoliv2.EmailVerifyActivity" />
-        <activity android:name="com.example.amantoliv2.VisualSearchActivity" />
-        <activity android:name="com.example.amantoliv2.SignUpActivity" />
-        <activity android:name="com.example.amantoliv2.LoginActivity" />
+        <activity android:name=".EmailVerifyActivity" />
+        <activity android:name=".VisualSearchActivity" />
+        <activity android:name=".SignUpActivity" />
+        <activity android:name=".LoginActivity" />
     </application>
 
 </manifest>

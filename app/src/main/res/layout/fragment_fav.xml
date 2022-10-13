@@ -18,6 +18,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
+        <!--Cambiar a lottie-->
         <com.airbnb.lottie.LottieAnimationView
             android:scaleType="fitCenter"
             android:id="@+id/animationViewFavPage"
