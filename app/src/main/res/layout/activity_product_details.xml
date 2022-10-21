@@ -283,7 +283,7 @@
                             android:layout_height="match_parent"
                             android:fontFamily="@font/metropolis_regular"
                             android:gravity="center"
-                            android:text="Ver más"
+                            android:text="Según tu interés"
                             android:textColor="@color/mainText"
                             android:textSize="12sp" />
 
@@ -333,7 +333,7 @@
             android:layout_marginLeft="10dp"
             android:layout_marginTop="20dp"
             android:layout_marginRight="10dp"
-            android:layout_marginBottom="20dp"
+            android:layout_marginBottom="50dp"
             android:background="@drawable/btn_bg_login2"
             android:text="Agregar a la bolsa"
             android:textColor="@color/white"/>

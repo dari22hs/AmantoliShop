@@ -33,7 +33,7 @@ class VisualSearchResultAdapter(private val productList: ArrayList<Product>, con
 
         Glide.with(ctx)
             .load(product.productImage)
-            .placeholder(R.drawable.bn)
+            .placeholder(R.drawable.product1clothes)
             .into(holder.productImage_singleProduct)
 
 
@@ -45,7 +45,7 @@ class VisualSearchResultAdapter(private val productList: ArrayList<Product>, con
         if(product.productHave == false){
 
             holder.discount_singleProduct.visibility = View.VISIBLE
-            holder.discountTv_singleProduct.text = "New"
+            holder.discountTv_singleProduct.text = "Nuevo"
 
         }
 

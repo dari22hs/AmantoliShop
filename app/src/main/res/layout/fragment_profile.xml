@@ -8,6 +8,8 @@
     tools:context=".Fragment.ProfileFragment">
 
     <!-- Top Bar -->
+
+    <!--ID LINEAR LAYOUT 2-->
     <LinearLayout
         android:id="@+id/linearLayout2"
         android:layout_width="match_parent"
@@ -47,6 +49,7 @@
     </LinearLayout>
 
 
+    <!--ID LINEAR LAYOUT 3-->
     <LinearLayout
         android:id="@+id/linearLayout3"
         android:layout_width="match_parent"
@@ -114,6 +117,7 @@
 
     </LinearLayout>
 
+    <!--ID LINEAR LAYOUT 4-->
     <LinearLayout
         android:id="@+id/linearLayout4"
         android:orientation="vertical"
@@ -121,6 +125,7 @@
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
 
+        <!--CARD PEDIDOS-->
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="70dp"
@@ -172,6 +177,7 @@
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
+        <!--CARD DIRECCIONES-->
         <androidx.cardview.widget.CardView
             android:id="@+id/shippingAddressCard_ProfilePage"
             android:layout_width="match_parent"
@@ -223,6 +229,7 @@
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
+        <!--CARD PAGOS-->
         <androidx.cardview.widget.CardView
             android:id="@+id/paymentMethod_ProfilePage"
             android:layout_width="match_parent"
@@ -276,6 +283,7 @@
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
+        <!--CARD PROMOCIONES-->
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="70dp"
@@ -326,12 +334,11 @@
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
-
+        <!--CARD CONFIGURACIÓN-->
         <androidx.cardview.widget.CardView
             android:id="@+id/settingCd_profileFrag"
             android:layout_width="match_parent"
             android:layout_height="70dp"
-
             android:layout_marginBottom="5dp"
             app:cardBackgroundColor="@color/background"
             app:cardElevation="0dp"

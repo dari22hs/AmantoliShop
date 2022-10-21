@@ -35,7 +35,7 @@ class ProductAdapter(private val productList: ArrayList<Product>, context: Conte
 
         Glide.with(ctx)
             .load(product.productImage)
-            .placeholder(bn)
+            .placeholder(product1clothes)
             .into(holder.productImage_singleProduct)
 
 
@@ -47,8 +47,7 @@ class ProductAdapter(private val productList: ArrayList<Product>, context: Conte
         if(product.productHave == false){
 
             holder.discount_singleProduct.visibility = View.VISIBLE
-            holder.discountTv_singleProduct.text = "New"
-
+            holder.discountTv_singleProduct.text = "Nuevo"
         }
 
         holder.itemView.setOnClickListener {
@@ -58,7 +57,7 @@ class ProductAdapter(private val productList: ArrayList<Product>, context: Conte
     }
 
     override fun getItemCount(): Int {
-         return productList.size
+        return productList.size
     }
 
     public class ViewHolder(itemView: View):RecyclerView.ViewHolder(itemView){
@@ -71,7 +70,6 @@ class ProductAdapter(private val productList: ArrayList<Product>, context: Conte
         val productName_singleProduct:TextView = itemView.findViewById(R.id.productName_singleProduct)
         val productPrice_singleProduct:TextView = itemView.findViewById(R.id.productPrice_singleProduct)
         val discount_singleProduct = itemView.findViewById<LinearLayout>(R.id.discount_singleProduct)
-
 
     }
 

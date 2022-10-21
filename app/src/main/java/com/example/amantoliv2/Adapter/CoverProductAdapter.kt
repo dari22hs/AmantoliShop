@@ -23,8 +23,6 @@ class CoverProductAdapter(var ctx: Context, private val coverProductList: ArrayL
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
 
-
-
         val coverPro:Product = coverProductList[position]
 
         holder.productNoteCover.text = coverPro.productNote
@@ -32,17 +30,13 @@ class CoverProductAdapter(var ctx: Context, private val coverProductList: ArrayL
             .load(coverPro.productImage)
             .into(holder.productImage_coverPage)
 
-
         holder.productCheck_coverPage.setOnClickListener {
 
             goDetailsPage(position)
 
-
         }
 
     }
-
-
 
 
     override fun getItemCount(): Int {
@@ -54,7 +48,6 @@ class CoverProductAdapter(var ctx: Context, private val coverProductList: ArrayL
         val productImage_coverPage: ImageView = itemView.findViewById(R.id.productImage_coverPage)
         val productNoteCover: TextView = itemView.findViewById(R.id.productNoteCover)
         val productCheck_coverPage: Button = itemView.findViewById(R.id.productCheck_coverPage)
-
 
     }
 

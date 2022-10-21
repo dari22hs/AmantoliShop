@@ -56,7 +56,6 @@ class CartAdapter(private val ctx: Context, val listener:CartItemClickAdapter ):
         val cartPrice: TextView = itemView.findViewById(R.id.cartPrice)
         val quantityTvCart: TextView = itemView.findViewById(R.id.quantityTvCart)
 
-
     }
 
     fun updateList(newList: List<ProductEntity>){
@@ -65,12 +64,10 @@ class CartAdapter(private val ctx: Context, val listener:CartItemClickAdapter ):
         notifyDataSetChanged()
     }
 
-
 }
 
 interface CartItemClickAdapter{
     fun onItemDeleteClick(product: ProductEntity)
     fun onItemUpdateClick(product: ProductEntity)
-
 
 }

@@ -95,11 +95,11 @@ class ProfileFragment : Fragment() {
         })
 
         if(cards == 0){
-            cardsNumber_profileFrag.text = "You Have no Cards."
+            cardsNumber_profileFrag.text = "Administrar mis tarjetas."
         }
         else{
 
-            cardsNumber_profileFrag.text = "You Have "+ cards.toString() + " Cards."
+            cardsNumber_profileFrag.text = "Tiene "+ cards.toString() + " tarjetas."
         }
 
         shippingAddressCard_ProfilePage.setOnClickListener {
@@ -127,8 +127,6 @@ class ProfileFragment : Fragment() {
             val intent = Intent(context, SettingsActivity::class.java)
             startActivity(intent)
         }
-
-
 
         profileImage_profileFrag.setOnClickListener {
 

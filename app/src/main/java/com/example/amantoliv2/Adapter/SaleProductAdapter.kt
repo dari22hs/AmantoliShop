@@ -32,7 +32,7 @@ class SaleProductAdapter(private val saleProductList: ArrayList<Product>, contex
 
         Glide.with(ctx)
             .load(product.productImage)
-            .placeholder(R.drawable.bn)
+            .placeholder(R.drawable.product1clothes)
             .into(holder.productImage_singleProduct)
 
 

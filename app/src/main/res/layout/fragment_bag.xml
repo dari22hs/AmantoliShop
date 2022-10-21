@@ -129,7 +129,7 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <!--Comentar el Lottie para ver la activity-->
-            <Button
+            <com.airbnb.lottie.LottieAnimationView
                 android:scaleType="centerCrop"
                 android:id="@+id/animationViewCartPage"
                 android:layout_width="match_parent"

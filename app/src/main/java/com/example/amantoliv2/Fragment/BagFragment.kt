@@ -93,7 +93,7 @@ class BagFragment : Fragment(), CartItemClickAdapter {
                 emptyBagMsgLayout.visibility = View.GONE
                 bottomCartLayout.visibility = View.VISIBLE
                 MybagText.visibility = View.VISIBLE
-                animationView.pauseAnimation()
+                animationView.pauseAnimation()//Cambiar arriba ? CHECAR ****************
             }
 
             Item.forEach {
@@ -102,15 +102,12 @@ class BagFragment : Fragment(), CartItemClickAdapter {
             totalPriceBagFrag.text = "$" + sum
         })
 
-
-
-
         return view
     }
 
     override fun onItemDeleteClick(product: ProductEntity) {
         cartViewModel.deleteCart(product)
-        Toast.makeText(context,"Eliminado del carrito",Toast.LENGTH_SHORT).show()
+        Toast.makeText(context,"Eliminado de la bolsa",Toast.LENGTH_SHORT).show()
     }
 
     override fun onItemUpdateClick(product: ProductEntity) {

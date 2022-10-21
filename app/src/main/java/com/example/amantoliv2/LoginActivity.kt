@@ -27,9 +27,6 @@ class LoginActivity : AppCompatActivity() {
     lateinit var emailError:TextView
     lateinit var passwordError:TextView
 
-
-
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
@@ -40,8 +37,6 @@ class LoginActivity : AppCompatActivity() {
         passEt = findViewById(R.id.PassEt)
         emailError = findViewById(R.id.emailError)
         passwordError = findViewById(R.id.passwordError)
-
-
 
         textAutoCheck()
 
@@ -54,23 +49,17 @@ class LoginActivity : AppCompatActivity() {
 
         signInBtn.setOnClickListener {
             checkInput()
-
-
         }
-
 
     }
 
     private fun textAutoCheck() {
-
-
 
         emailEt.addTextChangedListener(object : TextWatcher {
 
             override fun afterTextChanged(s: Editable) {
                 if (emailEt.text.isEmpty()){
                     emailEt.setCompoundDrawablesWithIntrinsicBounds(null, null, null, null)
-
                 }
                 else if (Patterns.EMAIL_ADDRESS.matcher(emailEt.text).matches()) {
                     emailEt.setCompoundDrawablesWithIntrinsicBounds(null, null, ContextCompat.getDrawable(applicationContext,R.drawable.ic_check), null)
@@ -122,8 +111,6 @@ class LoginActivity : AppCompatActivity() {
             }
         })
 
-
-
     }
 
     private fun checkInput() {
@@ -156,8 +143,6 @@ class LoginActivity : AppCompatActivity() {
 
         loadingDialog.startLoadingDialog()
         signInEmail = emailEt.text.toString().trim();
-
-
 
         signInPassword = passEt.text.toString().trim()
 

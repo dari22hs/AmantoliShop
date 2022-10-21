@@ -48,8 +48,6 @@ class HomeFragment : Fragment() {
     lateinit var newLayout:LinearLayout
     lateinit var saleLayout:LinearLayout
 
-
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -59,12 +57,9 @@ class HomeFragment : Fragment() {
 
         activity?.window?.addFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS)
 
-
-
         coverProduct = arrayListOf()
         newProduct = arrayListOf()
         saleProduct = arrayListOf()
-
 
         coverRecView = view.findViewById(R.id.coverRecView)
         newRecView = view.findViewById(R.id.newRecView)
@@ -73,12 +68,9 @@ class HomeFragment : Fragment() {
         saleLayout = view.findViewById(R.id.saleLayout)
         animationView = view.findViewById(R.id.animationView)
 
-
-
         val visualSearchBtn_homePage:ImageView = view.findViewById(R.id.visualSearchBtn_homePage)
 
         hideLayout()
-
         setCoverData()
         setNewProductData()
 
@@ -87,37 +79,24 @@ class HomeFragment : Fragment() {
         coverProductAdapter = CoverProductAdapter(activity as Context, coverProduct )
         coverRecView.adapter = coverProductAdapter
 
-
-
         newRecView.layoutManager = LinearLayoutManager(context,LinearLayoutManager.HORIZONTAL, false)
         newRecView.setHasFixedSize(true)
         newProductAdapter = ProductAdapter(newProduct, activity as Context )
         newRecView.adapter = newProductAdapter
-
 
         saleRecView.layoutManager = LinearLayoutManager(context,LinearLayoutManager.HORIZONTAL, false)
         saleRecView.setHasFixedSize(true)
         saleProductAdapter = SaleProductAdapter(saleProduct, activity as Context )
         saleRecView.adapter = saleProductAdapter
 
-
-
         visualSearchBtn_homePage.setOnClickListener {
             startActivity(Intent(context,VisualSearchActivity::class.java))
         }
 
-
-
-
-
         showLayout()
-
-
 
         return view
     }
-
-
 
     private fun hideLayout(){
         animationView.playAnimation()
@@ -147,6 +126,7 @@ class HomeFragment : Fragment() {
         return jsonString
     }
 
+    //Fill data from CoverProducts
     private fun setCoverData() {
 
         val jsonFileString = context?.let {
@@ -160,38 +140,29 @@ class HomeFragment : Fragment() {
         var coverD: List<Product> = gson.fromJson(jsonFileString, listCoverType)
 
         coverD.forEachIndexed { idx, person ->
-
             coverProduct.add(person)
             saleProduct.add(person)
+        }//End forEachIndexed
 
-        }
+    }//End setCoverData
 
-
-    }
-
+    //Fill data from NewProducts
     private fun setNewProductData() {
 
         val jsonFileString = context?.let {
-
             getJsonData(it, "NewProducts.json")
         }
+
         val gson = Gson()
-
         val listCoverType = object : TypeToken<List<Product>>() {}.type
-
         var coverD: List<Product> = gson.fromJson(jsonFileString, listCoverType)
 
         coverD.forEachIndexed { idx, person ->
-
-
             newProduct.add(person)
-
-
         }
 
+    }//End setNewProductData
 
-    }
-
-}
+}//End class HomeFragment
 
 

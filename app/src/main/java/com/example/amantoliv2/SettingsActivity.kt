@@ -6,6 +6,7 @@ import android.text.Editable
 import android.text.TextWatcher
 import android.view.View
 import android.widget.*
+import com.airbnb.lottie.LottieAnimationView
 import com.example.amantoliv2.Utils.Extensions.toast
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.ktx.firestore
@@ -20,7 +21,10 @@ class SettingsActivity : AppCompatActivity() {
 
     lateinit var nameEt_SettingsPage:EditText
     lateinit var EmailEt_SettingsPage:EditText
-    lateinit var saveSetting_SettingsBtn:Button
+    //lateinit var saveSetting_SettingsBtn:Button
+    lateinit var animationView: LottieAnimationView
+    var isChecked = true
+    var isBoxChecked = true
 
     private val userCollectionRef = Firebase.firestore.collection("Users")
     val firebaseAuth: FirebaseAuth = FirebaseAuth.getInstance()
@@ -30,10 +34,27 @@ class SettingsActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_settings)
 
-        nameEt_SettingsPage = findViewById(R.id.nameEt_SettingsPage)
-        EmailEt_SettingsPage = findViewById(R.id.EmailEt_SettingsPage)
-        saveSetting_SettingsBtn = findViewById(R.id.saveSetting_SettingsBtn)
+        //nameEt_SettingsPage = findViewById(R.id.nameEt_SettingsPage)
+        //EmailEt_SettingsPage = findViewById(R.id.EmailEt_SettingsPage)
+        //saveSetting_SettingsBtn = findViewById(R.id.saveSetting_SettingsBtn)
         val backIv_ProfileFrag:ImageView = findViewById(R.id.backIv_ProfileFrag)
+
+        var checkAnim = findViewById<LottieAnimationView>(R.id.animationViewAppMode)
+        var chkb1 = findViewById<CheckBox>(R.id.chkb1)
+
+
+        checkAnim.setOnClickListener{
+            if (isChecked){
+                checkAnim.speed = -1f
+                checkAnim.playAnimation()
+                isChecked = false
+            }else{
+                checkAnim.speed = -1f
+                checkAnim.playAnimation()
+                isChecked = false
+                checkAnim.pauseAnimation()
+            }//Fin else
+        }//Fin setOnClickListener
 
 
         backIv_ProfileFrag.setOnClickListener {
@@ -42,11 +63,11 @@ class SettingsActivity : AppCompatActivity() {
 
         getUserData()
 
-        saveSetting_SettingsBtn.setOnClickListener {
-            textCheck()
-        }
+        /*saveSetting_SettingsBtn.setOnClickListener {
+            //textCheck()
+        }*/
 
-        textAutoCheck()
+        //textAutoCheck()
     }
 
 
@@ -72,7 +93,7 @@ class SettingsActivity : AppCompatActivity() {
         }
     }
 
-    private fun textCheck() {
+    /*private fun textCheck() {
 
         if(nameEt_SettingsPage.text.isEmpty()){
             toast("Ingrese un nombre")
@@ -84,9 +105,9 @@ class SettingsActivity : AppCompatActivity() {
         }
 
         saveNameAndEmailToFireStore()
-    }
+    }*/
 
-    private fun saveNameAndEmailToFireStore()= CoroutineScope(Dispatchers.IO).launch {
+    /*private fun saveNameAndEmailToFireStore()= CoroutineScope(Dispatchers.IO).launch {
 
         try {
 
@@ -106,9 +127,9 @@ class SettingsActivity : AppCompatActivity() {
             }
         }
 
-    }
+    }*/
 
-    private fun textAutoCheck() {
+    /*private fun textAutoCheck() {
 
         nameEt_SettingsPage.addTextChangedListener(object : TextWatcher {
 
@@ -147,5 +168,5 @@ class SettingsActivity : AppCompatActivity() {
                 }
             }
         })
-    }
+    }*/
 }

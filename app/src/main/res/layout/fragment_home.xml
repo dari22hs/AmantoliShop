@@ -13,7 +13,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/coverRecView"
             android:layout_width="match_parent"
@@ -21,11 +20,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
-
-
         </androidx.recyclerview.widget.RecyclerView>
-
-
 
         <LinearLayout
             android:id="@+id/newLayout"
@@ -85,7 +80,7 @@
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
                     android:fontFamily="@font/metropolis_regular"
-                    android:text="Solo disponible en Amantoli"
+                    android:text="Nuevos productos en Amantoli"
                     android:textColor="@color/textAd"
                     android:textSize="11sp" />
 
@@ -159,7 +154,7 @@
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
                     android:fontFamily="@font/metropolis_regular"
-                    android:text="Solo disponible en Amantoli"
+                    android:text="Contenido promocionado en Amantoli"
                     android:textColor="@color/textAd"
                     android:textSize="11sp" />
 
@@ -190,8 +185,8 @@
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:layout_marginTop="35dp"
-            android:layout_marginRight="20dp"
-            android:src="@drawable/ic_visual_search"
+            android:layout_marginEnd="300dp"
+            android:src="@drawable/ic_visual_search_v3"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 

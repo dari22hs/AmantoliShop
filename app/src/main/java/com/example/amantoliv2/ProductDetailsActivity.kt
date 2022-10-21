@@ -81,7 +81,7 @@ class ProductDetailsActivity : AppCompatActivity() {
         cardNumber = GetDefCard()
 
         if(cardNumber == "" || cardNumber == null){
-            cardNumberProduct_Details.text = "You Have No Cards"
+            cardNumberProduct_Details.text = "No hay tarjetas"
         }
         else{
             cardNumberProduct_Details.text = cardXXGen(cardNumber)
@@ -155,7 +155,7 @@ class ProductDetailsActivity : AppCompatActivity() {
         cartViewModel = ViewModelProviders.of(this).get(CartViewModel::class.java)
 
         cartViewModel.insert(ProductEntity(pName, qua, pPrice, pPid, pImage))
-        toast("Add to Bag Successfully")
+        toast("Agregado a la bolsa")
     }
 
     fun getJsonData(context: Context, fileName: String): String? {
@@ -205,7 +205,7 @@ class ProductDetailsActivity : AppCompatActivity() {
         productBrand_ProductDetailsPage.text = coverD[productIndex].productBrand
         productDes_ProductDetailsPage.text = coverD[productIndex].productDes
         productRating_singleProduct.rating = coverD[productIndex].productRating
-        RatingProductDetails.text = coverD[productIndex].productRating.toString() + " Rating on this Product."
+        RatingProductDetails.text = coverD[productIndex].productRating.toString() + " estrellas en este producto."
 
         pName = coverD[productIndex].productName
         pPrice = coverD[productIndex].productPrice.toInt()

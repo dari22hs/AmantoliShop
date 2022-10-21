@@ -16,16 +16,12 @@ import com.example.amantoliv2.R
 
 class CategoryAdapter(var ctx: Context, private val categoryList: ArrayList<Category>) :RecyclerView.Adapter<CategoryAdapter.ViewHolder>(){
 
-
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val categoryView = LayoutInflater.from(parent.context).inflate(R.layout.category_single,parent,false)
         return ViewHolder(categoryView)
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-
-
 
         val item:Category = categoryList[position]
 
@@ -34,7 +30,6 @@ class CategoryAdapter(var ctx: Context, private val categoryList: ArrayList<Cate
         Glide.with(ctx)
             .load(item.Image)
             .into(holder.categoryImage_CateSingle)
-
     }
 
     override fun getItemCount(): Int {
@@ -45,6 +40,10 @@ class CategoryAdapter(var ctx: Context, private val categoryList: ArrayList<Cate
 
         val categoryImage_CateSingle: ImageView = itemView.findViewById(R.id.categoryImage_CateSingle)
         val categoryName_CateSingle: TextView = itemView.findViewById(R.id.categoryName_CateSingle)
+
+    }
+
+    fun openCategory(){
 
     }
 
